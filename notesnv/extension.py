@@ -291,7 +291,7 @@ class NotesNv:
         Copy the contents of note file into the clipboard
         """
         with open(path, "rt") as f:
-            return CopyToClipboardAction(f.read())
+            return CopyToClipboardAction(f.read().strip())
 
 
     def list_commands(self, filename: str) -> BaseAction:
